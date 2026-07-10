@@ -1,0 +1,219 @@
+/* ===========================================
+   Upload Page
+=========================================== */
+
+.upload-section{
+
+    min-height:100vh;
+
+    padding:120px 8% 60px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#f5f9ff;
+
+}
+
+.upload-card{
+
+    width:100%;
+
+    max-width:700px;
+
+    background:#ffffff;
+
+    padding:45px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.upload-icon{
+
+    font-size:70px;
+
+    color:#2563eb;
+
+    margin-bottom:20px;
+
+}
+
+.upload-card h2{
+
+    font-size:36px;
+
+    color:#1e293b;
+
+    margin-bottom:15px;
+
+}
+
+.upload-card p{
+
+    color:#64748b;
+
+    font-size:16px;
+
+    margin-bottom:30px;
+
+}
+
+/* ===========================================
+   Upload Box
+=========================================== */
+
+.upload-box{
+
+    border:3px dashed #2563eb;
+
+    border-radius:20px;
+
+    padding:45px 30px;
+
+    background:#f8fbff;
+
+    margin-bottom:30px;
+
+    transition:.3s;
+
+}
+
+.upload-box:hover{
+
+    background:#eef5ff;
+
+    border-color:#1d4ed8;
+
+}
+
+.upload-box i{
+
+    font-size:60px;
+
+    color:#2563eb;
+
+    margin-bottom:20px;
+
+}
+
+.upload-box h3{
+
+    color:#1e293b;
+
+    margin-bottom:20px;
+
+}
+
+.browse-btn{
+
+    display:inline-block;
+
+    padding:14px 28px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    text-decoration:none;
+
+}
+
+.browse-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* ===========================================
+   Upload Button
+=========================================== */
+
+.file-info{
+
+    margin-bottom:25px;
+
+    color:#64748b;
+
+    font-size:15px;
+
+}
+
+.upload-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.upload-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+/* ===========================================
+   Responsive
+=========================================== */
+
+@media(max-width:768px){
+
+    .upload-section{
+
+        padding:110px 5% 40px;
+
+    }
+
+    .upload-card{
+
+        padding:30px 20px;
+
+    }
+
+    .upload-card h2{
+
+        font-size:28px;
+
+    }
+
+    .upload-box{
+
+        padding:35px 20px;
+
+    }
+
+    .upload-icon{
+
+        font-size:55px;
+
+    }
+
+}

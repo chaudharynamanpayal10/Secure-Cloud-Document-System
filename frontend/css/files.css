@@ -1,0 +1,237 @@
+/* ===========================================
+   Files Page
+=========================================== */
+
+.files-section{
+
+    min-height:100vh;
+
+    padding:120px 8% 60px;
+
+    background:#f5f9ff;
+
+}
+
+.files-section h1{
+
+    font-size:40px;
+
+    color:#1e293b;
+
+    margin-bottom:10px;
+
+}
+
+.files-section p{
+
+    color:#64748b;
+
+    margin-bottom:35px;
+
+}
+
+
+/* ===========================================
+   Search Box
+=========================================== */
+
+.search-box{
+
+    width:100%;
+
+    max-width:450px;
+
+    display:flex;
+
+    align-items:center;
+
+    background:#ffffff;
+
+    border-radius:12px;
+
+    padding:14px 18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    margin-bottom:35px;
+
+}
+
+.search-box i{
+
+    color:#2563eb;
+
+    margin-right:12px;
+
+    font-size:18px;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+    border:none;
+
+    outline:none;
+
+    font-size:16px;
+
+    background:transparent;
+
+}
+
+/* ===========================================
+   Table
+=========================================== */
+
+.table-container{
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.08);
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+thead{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+}
+
+th{
+
+    padding:18px;
+
+    text-align:left;
+
+}
+
+td{
+
+    padding:18px;
+
+    border-bottom:1px solid #e2e8f0;
+
+}
+
+tbody tr{
+
+    transition:.3s;
+
+}
+
+tbody tr:hover{
+
+    background:#f1f5ff;
+
+}
+
+td i{
+
+    color:#2563eb;
+
+    margin-right:10px;
+
+}
+
+/* ===========================================
+   Buttons
+=========================================== */
+
+.download-btn{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    margin-right:10px;
+
+    transition:.3s;
+
+}
+
+.download-btn:hover{
+
+    background:#1d4ed8;
+
+}
+
+.delete-btn{
+
+    background:#ef4444;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.delete-btn:hover{
+
+    background:#dc2626;
+
+}
+
+
+/* ===========================================
+   Responsive
+=========================================== */
+
+@media(max-width:768px){
+
+    .files-section{
+
+        padding:110px 5% 40px;
+
+    }
+
+    .files-section h1{
+
+        font-size:30px;
+
+    }
+
+    .table-container{
+
+        overflow-x:auto;
+
+    }
+
+    table{
+
+        min-width:700px;
+
+    }
+
+}

@@ -1,0 +1,92 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Upload File | CloudVault AI</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/upload.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-cloud"></i>
+            CloudVault AI
+        </div>
+
+        <a href="dashboard.html" class="btn">
+            Dashboard
+        </a>
+
+    </nav>
+
+    <!-- Upload Section -->
+
+    <section class="upload-section">
+
+        <div class="upload-card">
+
+            <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+
+            <h2>Upload Your Documents</h2>
+
+            <p>
+    Securely upload and manage your documents with CloudVault AI.
+</p>
+
+            <div class="upload-box">
+
+                <i class="fa-solid fa-file-arrow-up"></i>
+
+                <h3>Choose a File</h3>
+
+                <input type="file" id="fileUpload" hidden>
+
+                <label for="fileUpload" class="browse-btn">
+                    Browse Files
+                </label>
+
+            </div>
+
+            <p class="file-info">
+                Supported: PDF, DOCX, PPT, JPG, PNG (Max 10 MB)
+            </p>
+
+            <button type="button" class="upload-btn">
+    Upload File
+</button>
+
+        </div>
+
+    </section>
+
+    <script src="js/upload.js"></script>
+
+</body>
+
+</html>
+```

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Files | CloudVault AI</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/files.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-cloud"></i>
+            CloudVault AI
+        </div>
+
+        <a href="dashboard.html" class="btn">
+            Dashboard
+        </a>
+
+    </nav>
+
+    <!-- Files Section -->
+
+    <section class="files-section">
+
+        <h1>My Files</h1>
+
+        <p>Manage all your uploaded documents.</p>
+
+        <!-- Search Box -->
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search files...">
+
+        </div>
+
+        <!-- Files Table -->
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>File Name</th>
+
+                        <th>Type</th>
+
+                        <th>Size</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <!-- Dynamic Data -->
+                <tbody id="filesTableBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <!-- JavaScript -->
+    <script src="js/files.js"></script>
+
+</body>
+
+</html>

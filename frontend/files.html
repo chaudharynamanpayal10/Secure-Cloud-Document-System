@@ -4,101 +4,160 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>My Files | CloudVault AI</title>
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+          href="css/files.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+          rel="stylesheet">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/files.css">
-    <link rel="stylesheet" href="css/responsive.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
 <body>
 
-    <!-- Navbar -->
+<div class="container">
 
-    <nav class="navbar">
+    <!-- Header -->
 
-        <div class="logo">
-            <i class="fa-solid fa-cloud"></i>
-            CloudVault AI
+    <header>
+
+        <div>
+
+            <h1>
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                My Files
+
+            </h1>
+
+            <p>
+
+                View, Download and Delete your uploaded documents.
+
+            </p>
+
         </div>
 
-        <a href="dashboard.html" class="btn">
-            Dashboard
-        </a>
-
-    </nav>
-
-    <!-- Files Section -->
-
-    <section class="files-section">
-
-        <h1>My Files</h1>
-
-        <p>Manage all your uploaded documents.</p>
-
-        <!-- Search Box -->
-
         <div class="search-box">
-
-            <i class="fa-solid fa-magnifying-glass"></i>
 
             <input
                 type="text"
                 id="searchInput"
-                placeholder="Search files...">
+                placeholder="Search Files...">
 
         </div>
 
-        <!-- Files Table -->
+    </header>
 
-        <div class="table-container">
+    <!-- Summary Cards -->
 
-            <table>
+    <section class="summary">
 
-                <thead>
+        <div class="card">
 
-                    <tr>
+            <i class="fa-solid fa-folder"></i>
 
-                        <th>File Name</th>
+            <h3>Total Files</h3>
 
-                        <th>Type</th>
+            <h2 id="totalFiles">
 
-                        <th>Size</th>
+                0
 
-                        <th>Action</th>
+            </h2>
 
-                    </tr>
+        </div>
 
-                </thead>
+        <div class="card">
 
-                <!-- Dynamic Data -->
-                <tbody id="filesTableBody">
+            <i class="fa-solid fa-hard-drive"></i>
 
-                </tbody>
+            <h3>Storage Used</h3>
 
-            </table>
+            <h2 id="storageUsed">
+
+                0 MB
+
+            </h2>
 
         </div>
 
     </section>
 
-    <!-- JavaScript -->
-    <script src="js/files.js"></script>
+    <!-- Buttons -->
+
+    <section class="top-buttons">
+
+        <button id="dashboardBtn">
+
+            <i class="fa-solid fa-house"></i>
+
+            Dashboard
+
+        </button>
+
+        <button id="uploadBtn">
+
+            <i class="fa-solid fa-upload"></i>
+
+            Upload File
+
+        </button>
+
+    </section>
+
+    <!-- Files Table -->
+
+    <section class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>File Name</th>
+
+                    <th>Type</th>
+
+                    <th>Size</th>
+
+                    <th>Upload Date</th>
+
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="filesTable">
+
+                <!-- Dynamic Data -->
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</div>
+
+<script src="js/files.js"></script>
 
 </body>
 

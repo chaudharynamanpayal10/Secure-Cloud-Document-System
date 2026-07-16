@@ -1,49 +1,106 @@
 const loginForm = document.getElementById("loginForm");
 
-loginForm.addEventListener("submit", async function (e) {
+const showPassword = document.getElementById("showPassword");
+
+const passwordInput = document.getElementById("password");
+
+// Show / Hide Password
+
+showPassword.addEventListener("change", () => {
+
+    passwordInput.type = showPassword.checked ? "text" : "password";
+
+});
+
+// Login
+
+loginForm.addEventListener("submit", async (e) => {
 
     e.preventDefault();
 
-    const email = document.getElementById("email").value;
+    const email = document.getElementById("email").value.trim();
+
     const password = document.getElementById("password").value;
+
+    const loginBtn = loginForm.querySelector("button");
+
+    if (!email || !password) {
+
+        alert("Please fill all fields.");
+
+        return;
+
+    }
+
+    loginBtn.disabled = true;
+
+    loginBtn.innerText = "Logging In...";
 
     try {
 
-        const response = await fetch("http://localhost:5000/api/auth/login", {
+        const response = await fetch(
 
-            method: "POST",
+            "http://localhost:5000/api/auth/login",
 
-            headers: {
-                "Content-Type": "application/json"
-            },
+            {
 
-            body: JSON.stringify({
-                email,
-                password
-            })
+                method: "POST",
 
-        });
+                headers: {
+
+                    "Content-Type": "application/json"
+
+                },
+
+                body: JSON.stringify({
+
+                    email,
+
+                    password
+
+                })
+
+            }
+
+        );
 
         const data = await response.json();
 
-        if (data.success) {
+        if (response.ok && data.success) {
+
             localStorage.setItem("token", data.token);
 
-            alert("Login Successful ✅");
+            localStorage.setItem("username", data.user.username);
+
+            localStorage.setItem("email", data.user.email);
+
+            alert("Login Successful");
 
             window.location.href = "dashboard.html";
 
-        } else {
+        }
 
-            alert(data.message);
+        else {
+
+            alert(data.message || "Login Failed");
 
         }
 
-    } catch (error) {
+    }
 
-        alert("Server Error!");
+    catch (error) {
 
-        console.log(error);
+        console.error(error);
+
+        alert("Unable to connect to server.");
+
+    }
+
+    finally {
+
+        loginBtn.disabled = false;
+
+        loginBtn.innerText = "Login";
 
     }
 

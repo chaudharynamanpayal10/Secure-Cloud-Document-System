@@ -2,71 +2,71 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Login | CloudVault AI</title>
+    <title>Sign Up | CloudVault AI</title>
 
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/signup.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-
 </head>
 
 <body>
 
     <div class="container">
 
-        <!-- Left Side -->
-
         <div class="left">
 
-            <h1>Welcome Back</h1>
+            <h1>CloudVault AI</h1>
 
             <p>
-
-                Login to securely access your cloud documents stored on AWS S3.
-
+                Secure Cloud Document Management System
             </p>
 
             <ul>
 
                 <li>🔒 Secure JWT Authentication</li>
 
-                <li>☁ AWS S3 Storage</li>
+                <li>☁ AWS S3 Cloud Storage</li>
 
-                <li>📂 Manage Your Files</li>
+                <li>📂 Upload & Manage Files</li>
 
-                <li>🐳 Docker Powered</li>
+                <li>🐳 Docker Deployment</li>
 
-                <li>⚡ Fast & Secure Access</li>
+                <li>⚡ Fast & Responsive Dashboard</li>
 
             </ul>
 
         </div>
 
-        <!-- Right Side -->
-
         <div class="right">
 
             <div class="card">
 
-                <h2>Login</h2>
+                <h2>Create Account</h2>
 
                 <p class="subtitle">
-
-                    Enter your account details
-
+                    Start storing your files securely.
                 </p>
 
-                <form id="loginForm">
+                <form id="signupForm">
+
+                    <div class="input-group">
+
+                        <label>Username</label>
+
+                        <input
+                            type="text"
+                            id="username"
+                            placeholder="Enter Username"
+                            required>
+
+                    </div>
 
                     <div class="input-group">
 
@@ -92,41 +92,33 @@
 
                     </div>
 
-                    <div class="options">
+                    <div class="input-group">
 
-                        <label>
+                        <label>Confirm Password</label>
 
-                            <input
-                                type="checkbox"
-                                id="showPassword">
-
-                            Show Password
-
-                        </label>
-
-                        <a href="#" class="forgot">
-
-                            Forgot Password?
-
-                        </a>
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm Password"
+                            required>
 
                     </div>
 
                     <button type="submit">
 
-                        Login
+                        Create Account
 
                     </button>
 
                 </form>
 
-                <p class="signup-link">
+                <p class="login-link">
 
-                    Don't have an account?
+                    Already have an account?
 
-                    <a href="signup.html">
+                    <a href="login.html">
 
-                        Sign Up
+                        Login
 
                     </a>
 
@@ -138,7 +130,7 @@
 
     </div>
 
-    <script src="js/login.js"></script>
+    <script src="js/signup.js"></script>
 
 </body>
 

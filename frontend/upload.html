@@ -1,92 +1,158 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Upload File | CloudVault AI</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Upload Files | CloudVault AI</title>
+
+    <link rel="stylesheet"
+          href="css/upload.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+          rel="stylesheet">
 
-    <!-- Font Awesome -->
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/upload.css">
-    <link rel="stylesheet" href="css/responsive.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
 <body>
 
-    <!-- Navbar -->
+<div class="container">
 
-    <nav class="navbar">
+    <div class="upload-card">
 
-        <div class="logo">
-            <i class="fa-solid fa-cloud"></i>
-            CloudVault AI
-        </div>
+        <h1>
 
-        <a href="dashboard.html" class="btn">
-            Dashboard
-        </a>
+            <i class="fa-solid fa-cloud-arrow-up"></i>
 
-    </nav>
+            Upload Document
 
-    <!-- Upload Section -->
+        </h1>
 
-    <section class="upload-section">
+        <p>
 
-        <div class="upload-card">
+            Securely upload your files to AWS S3 Cloud Storage.
 
-            <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+        </p>
 
-            <h2>Upload Your Documents</h2>
+        <!-- Drag Area -->
+
+        <div
+            class="drop-zone"
+            id="dropZone">
+
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+
+            <h2>
+
+                Drag & Drop File Here
+
+            </h2>
 
             <p>
-    Securely upload and manage your documents with CloudVault AI.
-</p>
 
-            <div class="upload-box">
+                or
 
-                <i class="fa-solid fa-file-arrow-up"></i>
+            </p>
 
-                <h3>Choose a File</h3>
+            <label
+                for="fileInput"
+                class="browse-btn">
 
-                <input type="file" id="fileUpload" hidden>
+                Browse File
 
-                <label for="fileUpload" class="browse-btn">
-                    Browse Files
-                </label>
+            </label>
+
+            <input
+                type="file"
+                id="fileInput"
+                hidden>
+
+        </div>
+
+        <!-- File Preview -->
+
+        <div
+            class="file-preview"
+            id="filePreview">
+
+            <i class="fa-solid fa-file"></i>
+
+            <h3 id="fileName">
+
+                No File Selected
+
+            </h3>
+
+            <p id="fileSize">
+
+                Size : 0 KB
+
+            </p>
+
+        </div>
+
+        <!-- Progress -->
+
+        <div class="progress-container">
+
+            <div
+                class="progress-bar"
+                id="progressBar">
 
             </div>
 
-            <p class="file-info">
-                Supported: PDF, DOCX, PPT, JPG, PNG (Max 10 MB)
-            </p>
+        </div>
 
-            <button type="button" class="upload-btn">
-    Upload File
-</button>
+        <p id="progressText">
+
+            0%
+
+        </p>
+
+        <!-- Buttons -->
+
+        <div class="buttons">
+
+            <button
+                id="uploadBtn">
+
+                <i class="fa-solid fa-upload"></i>
+
+                Upload File
+
+            </button>
+
+            <button
+                id="dashboardBtn">
+
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+
+            </button>
 
         </div>
 
-    </section>
+    </div>
 
-    <script src="js/upload.js"></script>
+</div>
+
+<script src="js/upload.js"></script>
 
 </body>
 
 </html>
-```

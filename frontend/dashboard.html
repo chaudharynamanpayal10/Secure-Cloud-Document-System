@@ -4,152 +4,232 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Dashboard | CloudVault AI</title>
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet"
+          href="css/dashboard.css">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Font Awesome -->
+          rel="stylesheet">
 
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <!-- CSS -->
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="css/dashboard.css">
-
-    <link rel="stylesheet" href="css/responsive.css">
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
 
 <body>
 
-    <!-- Navbar -->
+<div class="sidebar">
 
-    <nav class="navbar">
+    <h2>CloudVault AI</h2>
 
-        <div class="logo">
+    <ul>
 
-            <i class="fa-solid fa-cloud"></i>
+        <li class="active">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+        </li>
 
-            CloudVault AI
+        <li id="uploadPage">
+            <i class="fa-solid fa-upload"></i>
+            Upload
+        </li>
 
-        </div>
+        <li id="filesPage">
+            <i class="fa-solid fa-folder"></i>
+            My Files
+        </li>
 
-        <a href="index.html" class="btn">
-
+        <li id="logoutBtn">
+            <i class="fa-solid fa-right-from-bracket"></i>
             Logout
+        </li>
 
-        </a>
+    </ul>
 
-    </nav>
+</div>
 
-    <!-- Dashboard -->
+<div class="main">
 
-    <section class="dashboard">
+    <header>
 
-        <h1>
+        <div>
 
-            Welcome Back, Naman 👋
+            <h1>
 
-        </h1>
+                Welcome,
 
-        <p>
+                <span id="username">
 
-            Manage all your cloud documents from one place.
+                    User
 
-        </p>
+                </span>
 
-        <!-- Cards -->
+                👋
 
-        <div class="dashboard-cards">
+            </h1>
 
-            <div class="dashboard-card">
+            <p>
 
-                <i class="fa-solid fa-folder"></i>
+                Manage all your cloud documents securely.
 
-                <h2>125</h2>
-
-                <p>Total Files</p>
-
-            </div>
-
-            <div class="dashboard-card">
-
-                <i class="fa-solid fa-cloud"></i>
-
-                <h2>75%</h2>
-
-                <p>Storage Used</p>
-
-            </div>
-
-            <div class="dashboard-card">
-
-                <i class="fa-solid fa-download"></i>
-
-                <h2>89</h2>
-
-                <p>Downloads</p>
-
-            </div>
-
-            <div class="dashboard-card">
-
-                <i class="fa-solid fa-shield-halved"></i>
-
-                <h2>Protected</h2>
-
-                <p>Security</p>
-
-            </div>
+            </p>
 
         </div>
 
-        <!-- Quick Actions -->
+        <div class="header-right">
 
-        <div class="quick-actions">
-
-            <h2>Quick Actions</h2>
-
-            <div class="action-buttons">
-
-                <a href="upload.html" class="btn">Upload File</a>
-
-                <a href="files.html" class="btn">My Files</a>
-
-            </div>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search files...">
 
         </div>
 
-        <!-- Recent Files -->
+    </header>
 
-        <div class="recent-files">
+    <!-- Statistics -->
 
-            <h2>Recent Files</h2>
+    <section class="stats">
 
-            <ul>
+        <div class="card">
 
-                <li><i class="fa-solid fa-file-pdf"></i> Resume.pdf</li>
+            <i class="fa-solid fa-folder-open"></i>
 
-                <li><i class="fa-solid fa-file-word"></i> Project_Report.docx</li>
+            <h3>Total Files</h3>
 
-                <li><i class="fa-solid fa-file-image"></i> Certificate.png</li>
+            <h2 id="totalFiles">
 
-            </ul>
+                0
+
+            </h2>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-hard-drive"></i>
+
+            <h3>Storage Used</h3>
+
+            <h2 id="storageUsed">
+
+                0 MB
+
+            </h2>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+
+            <h3>Uploaded Today</h3>
+
+            <h2 id="todayUploads">
+
+                0
+
+            </h2>
+
+        </div>
+
+        <div class="card">
+
+            <i class="fa-solid fa-user"></i>
+
+            <h3>Account</h3>
+
+            <h2>
+
+                Active
+
+            </h2>
 
         </div>
 
     </section>
+
+    <!-- Quick Actions -->
+
+    <section class="actions">
+
+        <button id="uploadBtn">
+
+            <i class="fa-solid fa-upload"></i>
+
+            Upload File
+
+        </button>
+
+        <button id="viewFilesBtn">
+
+            <i class="fa-solid fa-folder-open"></i>
+
+            View Files
+
+        </button>
+
+    </section>
+
+    <!-- Recent Files -->
+
+    <section class="recent-files">
+
+        <div class="section-title">
+
+            <h2>
+
+                Recent Files
+
+            </h2>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>File Name</th>
+
+                <th>Type</th>
+
+                <th>Size</th>
+
+                <th>Date</th>
+
+                <th>Actions</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="recentFiles">
+
+                <!-- Dynamic -->
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</div>
+
+<script src="js/dashboard.js"></script>
 
 </body>
 

@@ -32,7 +32,7 @@ signupForm.addEventListener("submit", async (e) => {
 
     try {
 
-        const response = await fetch("http://localhost:5001/api/auth/signup", {
+        const response = await fetch("http://13.233.157.89:5001/api/auth/signup", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

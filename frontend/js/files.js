@@ -4,7 +4,7 @@
 // ==========================================
 
 // Backend URL
-const API_URL = "http://localhost:5001/api/files";
+const API_URL = "http://13.233.157.89:5001/api/files";
 
 // JWT Token
 const token = localStorage.getItem("token");

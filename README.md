@@ -146,20 +146,6 @@ AWS_REGION=ap-south-1
 AWS_BUCKET_NAME=YOUR_BUCKET_NAME
 ```
 
----
-
-## 📸 Screenshots
-
-- Login Page
-- Signup Page
-- Dashboard
-- Upload Files
-- Files Page
-
-(Add screenshots here)
-
----
-
 ## 👨‍💻 Author
 
 **Naman Payal**
